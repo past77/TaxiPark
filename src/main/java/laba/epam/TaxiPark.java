@@ -23,6 +23,7 @@ public class TaxiPark {
     public void addCarToPark(Car car){
         taxipark.add(car);
     }
+
     public void createPark() throws IOException {
         for (int i = 0;i < 100;i++) {
             addCarToPark(new Universal(220, "Toyota", 30, 7, "green"));
@@ -63,6 +64,12 @@ public class TaxiPark {
             color = reader.readLine();
             System.out.println("Введите тип кузова. Univarsal - 1, Cupe - 2, HatchBack - 3, Cabriolette - 4, Pikcup - 5 ");
             typeOfCar = Integer.parseInt(reader.readLine());
+            if (typeOfCar < 0 || typeOfCar > 5)
+            {
+                System.out.println("Некорректный ввод, пжл, введите новый::");
+                typeOfCar = Integer.parseInt(reader.readLine());
+
+            }
 
             switch (typeOfCar) {
                 case 1:

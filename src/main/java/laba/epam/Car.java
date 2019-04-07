@@ -22,6 +22,8 @@ public class Car {
     }
 
     public void setSpeed(int speed) {
+        if (speed <= 0 || speed > 500)
+            return ;
         this.speed = speed;
     }
 
@@ -38,6 +40,8 @@ public class Car {
     }
 
     public void setPrice(int price) {
+        if (price <= 0)
+            return ;
         this.price = price;
     }
 
@@ -46,6 +50,8 @@ public class Car {
     }
 
     public void setFuelConsumption(int fuelConsumption) {
+        if (fuelConsumption <= 0 || fuelConsumption > 70)
+            return ;
         this.fuelConsumption = fuelConsumption;
     }
 
