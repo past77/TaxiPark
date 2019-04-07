@@ -8,8 +8,12 @@ public class Car {
     private int price;
     private int fuelConsumption;
     private String color;
-    protected String typeOfCar;
+    private String typeOfCar;
 
+    public void setTypeOfCar(String typeOfCar) {
+        this.typeOfCar = typeOfCar;
+    }
+    
     public String getTypeOfCar() {
         return typeOfCar;
     }

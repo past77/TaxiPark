@@ -1,9 +1,11 @@
-package laba.epam;
+package laba.epam.Hierarchy;
 
-public class Pikcup extends Car{
+import laba.epam.Car;
+
+public class Pikcup extends Car {
 
     public Pikcup(int speed, String brand, int price, int fuelConsumption, String color) {
         super(speed, brand, price, fuelConsumption, color);
-        super.typeOfCar = "Pickup";
+        super.setTypeOfCar("Pickup");
     }
 }

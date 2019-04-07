@@ -1,8 +1,10 @@
-package laba.epam;
+package laba.epam.Hierarchy;
+
+import laba.epam.Car;
 
 public class Sedan extends Car {
     public Sedan(int speed, String brand, int price, int fuelConsumption, String color) {
         super(speed, brand, price, fuelConsumption, color);
-        super.typeOfCar = "Sedan";
+        super.setTypeOfCar("Sedan");
     }
 }

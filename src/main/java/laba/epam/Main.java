@@ -1,21 +1,26 @@
 package laba.epam;
 
-import java.io.BufferedReader;
+import laba.epam.Service.AutoService;
+import laba.epam.Service.SearchCar;
+import laba.epam.Service.ShowPark;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         TaxiPark taxiPark = new TaxiPark();
+        ShowPark parkshow = new ShowPark();
         AutoService autoService = new AutoService();
+        SearchCar search = new SearchCar();
         try {
             taxiPark.createPark();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        autoService.showTaxiPark(taxiPark.taxipark);
+        parkshow.showTaxiPark(taxiPark.taxipark);
         System.out.println();
         autoService.sortAllCars(taxiPark.taxipark);
+        search.searchCar(taxiPark.taxipark);
     }
 }
