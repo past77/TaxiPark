@@ -1,5 +1,4 @@
 package laba.epam.Service;
-import laba.epam.Car;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,18 +6,17 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class SearchCar extends ShowCar{
-    
     public int speedMin;
     public int speedMax;
     public String speed;
     private int i = 0;
-    private int j = 0;
+    private int isCar = 0;
 
     BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
    public void searchCar(ArrayList<Car> car)  throws IOException {
        ArrayList<Car> cars = new ArrayList<Car>(car);
        System.out.println();
-       System.out.println("Введите диапазон скорости для поиска машин (формат: 'min speed'-'max speed')");
+       System.out.println("Input range of speed for search cars (format: 'min speed'-'max speed')");
        speed = read.readLine();
        String str = new String(speed);
        for (String retval : str.split("-")) {
@@ -31,11 +29,11 @@ public class SearchCar extends ShowCar{
        for (Car c: cars) {
            if (c.getSpeed() >= speedMin &&
                    c.getSpeed() <= speedMax) {
-               j++;
+               isCar++;
                showCar(c);
            }
        }
-       if(j == 0)
-           System.out.println("Ничего не найдено");
+       if(isCar == 0)
+           System.out.println("Nothing found");
    }
 }

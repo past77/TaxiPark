@@ -2,14 +2,10 @@ package laba.epam;
 
 import static org.junit.Assert.*;
 
-import laba.epam.Car;
-import laba.epam.Hierarchy.Universal;
+import laba.epam.Service.Car;
 import laba.epam.Service.AutoService;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.ArrayList;
-import static org.junit.Assert.*;
-
 
 
 public class AutoServiceTest{

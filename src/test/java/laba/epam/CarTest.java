@@ -1,6 +1,7 @@
 package laba.epam;
 
 
+import laba.epam.Service.Car;
 import org.junit.Before;
 import org.junit.Test;
 

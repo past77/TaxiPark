@@ -1,17 +1,13 @@
 package laba.epam.Service;
 
-import laba.epam.Car;
-
 import java.util.ArrayList;
 
-
 public class ShowPark extends ShowCar {
-
     static int allPrice;
 
     public void showTaxiPark(ArrayList<Car> car) {
         ArrayList<Car> cars = new ArrayList<Car>(car);
-        System.out.println("Весь таксопарк: ");
+        System.out.println("All taxipark: ");
         for (Car c : car) {
             showCar(c);
         }
@@ -23,7 +19,7 @@ public class ShowPark extends ShowCar {
 
     public int calculatePrice(int allPrice){
         System.out.println();
-        System.out.printf("Цена автопарка: %d тис/$ \n", allPrice);
+        System.out.printf("Price of taxipark: %d th/$ \n", allPrice);
         return allPrice;
     }
 }

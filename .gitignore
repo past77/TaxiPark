@@ -9,4 +9,5 @@
 *.rar
 .idea
 *.iml
+*.DS_Store
 out

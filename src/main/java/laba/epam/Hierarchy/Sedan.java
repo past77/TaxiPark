@@ -1,6 +1,6 @@
 package laba.epam.Hierarchy;
 
-import laba.epam.Car;
+import laba.epam.Service.Car;
 
 public class Sedan extends Car {
     public Sedan(int speed, String brand, int price, int fuelConsumption, String color) {
